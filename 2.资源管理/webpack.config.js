@@ -13,7 +13,11 @@ module.exports = {
         test: /\.css$/,
         // 这里的loader链式调用, 链会逆序执行
         use: ['style-loader', 'css-loader']
-      }
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      },
     ]
   }
 };
